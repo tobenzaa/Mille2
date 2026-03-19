@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mille Edicola</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Georgia, serif;
+background:#f5f2ee;
+color:#1a1a1a;
+}
+
+.wrap{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+section{
+padding:60px 0;
+border-bottom:1px solid #ddd;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#000;
+color:#fff;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.navbar .wrap{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 20px;
+}
+
+.navbar a{
+color:white;
+margin-left:25px;
+font-family:sans-serif;
+font-size:14px;
+}
+
+/* HERO */
+
+.hero-title{
+font-size:90px;
+line-height:0.9;
+margin-bottom:30px;
+}
+
+.hero-text{
+font-family:sans-serif;
+font-size:20px;
+line-height:1.6;
+}
+
+/* PROJECT */
+
+.title{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.text{
+font-size:20px;
+line-height:1.6;
+}
+
+/* SLIDER */
+
+.slider{
+position:relative;
+overflow:hidden;
+}
+
+.slides{
+display:flex;
+transition:transform 0.4s ease;
+}
+
+.slide{
+min-width:100%;
+}
+
+.slide img{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+.controls{
+margin-top:10px;
+display:flex;
+justify-content:space-between;
+}
+
+button{
+background:none;
+border:1px solid #ccc;
+padding:8px 14px;
+cursor:pointer;
+}
+
+/* COLLABORAZIONI */
+
+ul{
+font-size:18px;
+line-height:2;
+}
+
+/* LOCATION */
+
+.map iframe{
+width:100%;
+height:260px;
+border:0;
+}
+
+/* FOOTER */
+
+.footer{
+background:#000;
+color:#fff;
+text-align:center;
+padding:25px;
+font-family:sans-serif;
+font-size:14px;
+}
+
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.hero-title{
+font-size:60px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="wrap">
+
+<div>Mille edicola</div>
+
+<div>
+<a href="#progetto">Progetto</a>
+<a href="#edicola">La nostra edicola</a>
+<a href="#collaborazioni">Collaborazioni</a>
+<a href="#location">Location</a>
+<a href="#contatti">Contatti</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- HERO -->
+
+<section>
+
+<div class="wrap grid">
+
+<div>
+<img src="hero.jpg" alt="edicola">
+</div>
+
+<div id="contatti">
+
+<div class="hero-title">
+Mille<br>edicola
+</div>
+
+<div class="hero-text">
+
+LA FORMA CONTEMPORANEA<br>
+DELL’EDICOLA TRADIZIONALE
+<br><br>
+
+GIORNALI, EVENTI, DIALOGHI
+<br><br>
+
+MILANO, PORTA ROMANA<br>
+Via Giuseppe Ripamonti 2
+<br><br>
+
+mille.edicola@milleedicola.com<br>
++39 02 36555550
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROGETTO + EDICOLA -->
+
+<section>
+
+<div class="wrap grid">
+
+<div id="progetto">
+
+<div class="title">Il progetto</div>
+
+<div class="text">
+Mille Edicola nasce a Milano come evoluzione dell’edicola tradizionale.
+Uno spazio dedicato alla carta stampata, agli incontri e al dialogo.
+</div>
+
+</div>
+
+<div id="edicola">
+
+<div class="title">La nostra edicola</div>
+
+<div class="slider">
+
+<div class="slides" id="slides">
+
+<div class="slide"><img src="edicola1.jpg"></div>
+<div class="slide"><img src="edicola2.jpg"></div>
+<div class="slide"><img src="edicola3.jpg"></div>
+<div class="slide"><img src="edicola4.jpg"></div>
+
+</div>
+
+</div>
+
+<div class="controls">
+
+<button onclick="prev()">←</button>
+<button onclick="next()">→</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- COLLABORAZIONI + LOCATION -->
+
+<section>
+
+<div class="wrap grid">
+
+<div id="collaborazioni">
+
+<div class="title">Collaborazioni</div>
+
+<div class="text">
+Mille Edicola ospita attivazioni editoriali, pop-up e progetti culturali.
+</div>
+
+<ul>
+
+<li>Pop-up editoriali</li>
+<li>Presentazioni</li>
+<li>Brand takeover</li>
+<li>Installazioni urbane</li>
+
+</ul>
+
+</div>
+
+<div id="location">
+
+<div class="title">Location</div>
+
+<div class="text">
+
+Milano<br>
+Porta Romana
+<br><br>
+
+Via Giuseppe Ripamonti 2<br>
++39 02 36555550<br>
+mille.edicola@milleedicola.com
+
+</div>
+
+<br>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Via+Giuseppe+Ripamonti+2+Milano" target="_blank">
+Indicazioni
+</a>
+
+<br><br>
+
+<div class="map">
+
+<iframe
+src="https://www.google.com/maps?q=Via+Giuseppe+Ripamonti+2+Milano&output=embed"
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+Mille Edicola Srl – Via Giuseppe Ripamonti 2, Milano – P.IVA XXXXXXXX<br>
+© 2025 Mille Edicola – Tutti i diritti riservati
+
+</div>
+
+<script>
+
+let slide=0
+
+function showSlide(){
+const slides=document.getElementById("slides")
+slides.style.transform="translateX(-"+slide*100+"%)"
+}
+
+function next(){
+slide++
+if(slide>3){slide=0}
+showSlide()
+}
+
+function prev(){
+slide--
+if(slide<0){slide=3}
+showSlide()
+}
+
+</script>
+
+</body>
+</html>
